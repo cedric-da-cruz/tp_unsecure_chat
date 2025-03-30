@@ -6,4 +6,6 @@ Prise en main
     A1 :Les données ne sont pas chiffrés sur le serveur, on peut les voir passer de manière transparente ce qui n'est pas très sécurisé
     
     Q2 :Pouvez vous expliquer en quoi la sérialisation pickle est certainement le plus mauvais choix ?
-    A2 :
+    A2 :La sérialisation pickle est un mauvais choix car les données ne sont pas chiffrées et on pourra pas vérifier si les données ont été altérées entre l'envoie et la reception. En plus le pickle peut venir lancer du code python a notre insu
+
+    
