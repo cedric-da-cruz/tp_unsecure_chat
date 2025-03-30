@@ -10,3 +10,14 @@ Prise en main
 
     Q3 : Quels types de sérialisation pourrait-on utiliser pour éviter cela ? (hors CVE)
     A3 : On pourrait utiliser JSON ou msgpack(utilisé plus loin dans le TP)
+
+Authenticated Encryption
+
+    Q4 : Pourquoi le chiffrement seul est-il insuffisant ?
+    A4 : en chiffrant le message on peut s'assurer de sa confidentialité mais on peut pas empecher un attaquant de venir modifier notre message
+
+    Q5 : Quelle fonction(s?) en python permet de générer un salt avec une qualité cryptographique ?
+    A5 : la fct os.urandom() permet la creation d'un salt de qualité cryptographique
+
+    Q6 : Faudra t-il transmettre le salt comme champ en clair supplémentaire du paquet message ?
+    A6 : Afin de confirmer la key a la reception il faudra utiliser le salt donc oui il est necessaire de transmettre le salt en clair
