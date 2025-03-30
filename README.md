@@ -21,3 +21,17 @@ Authenticated Encryption
 
     Q6 : Faudra t-il transmettre le salt comme champ en clair supplémentaire du paquet message ?
     A6 : Afin de confirmer la key a la reception il faudra utiliser le salt donc oui il est necessaire de transmettre le salt en clair
+
+    Q7 : Que constatez-vous côté serveur ?
+    A7 : On ne peut plus comprendre les messages car ils sont chiffré , on voit aussi le salt en lair que l'on fait passer avec le message
+
+    Q8 : Que peux faire le serveur si il est malveillant sur les messages ?
+    A8 : S'il est malveillant le serveur peut modifier le contenue de nos messages afin de les rendre illisibles après le déchiffrement à la reception
+
+Authenticated Encryption with Associated Data
+
+    Q9 : Que faudrait-il faire en théorie pour éviter l’action du rogue server ? Pourquoi Fernet n’est pas adapté dans ce cadre ?
+    A9 : Il faudrait mettre en place une signature numérique. Fernet n'est pas adapté car il ne permet pas de vérifier que le message n'a pas été altéré durant le transit
+
+    Q10 : Dans la pratique, quelle solution simple et sous optimal peut-on mettre en place afin de conserver Fernet ?
+    A10 : On peut utiliser un nickname associer au message, alors si le message est altéré puis renvoyé par le rogue serveur le message n'aura plus le meme nickname associé. Donc si le nickname est modifé alors le message a été altéré
