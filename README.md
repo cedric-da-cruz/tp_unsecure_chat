@@ -9,4 +9,4 @@ Prise en main
     A2 :La sérialisation pickle est un mauvais choix car les données ne sont pas chiffrées et on pourra pas vérifier si les données ont été altérées entre l'envoie et la reception. En plus le pickle peut venir lancer du code python a notre insu
 
     Q3 : Quels types de sérialisation pourrait-on utiliser pour éviter cela ? (hors CVE)
-    A3 : On pourrait utiliser JSON
+    A3 : On pourrait utiliser JSON ou msgpack(utilisé plus loin dans le TP)
