@@ -26,7 +26,7 @@ Authenticated Encryption
     A7 : On ne peut plus comprendre les messages car ils sont chiffré , on voit aussi le salt en lair que l'on fait passer avec le message
 
     Q8 : Que peux faire le serveur si il est malveillant sur les messages ?
-    A8 : S'il est malveillant le serveur peut modifier le contenue de nos messages afin de les rendre illisibles après le déchiffrement à la reception
+    A8 : S'il est malveillant le serveur peut modifier le salt/ou le message transmis afin de les rendre illisibles et indéchifrablles à la récéption
 
 Authenticated Encryption with Associated Data
 
